@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Hye') {
+            steps {
+                echo 'Hi bro'
+            }
+        }
+         stage('Okay') {
+            steps {
+                echo 'Okay bye'
+            }
+        }
+        
+    }
+}
+emailext attachLog: true, body: 'test', subject: 'test', to: 'sidharth.jaswal004@gmail.com'
